@@ -2,6 +2,7 @@ name: ephoenix_state
 description: Lightweight annotations and code generator for equality and copyWith.
 version: 0.1.0
 homepage:
+repository: https://github.com/markokarajlovic/ephoenix_state
 
 environment:
   sdk: ^3.0.0
