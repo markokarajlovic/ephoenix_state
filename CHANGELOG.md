@@ -1,5 +1,6 @@
 ## 1.0.1
 
+* Added `ephoenix_state <name>` CLI command that scaffolds a new state file with the correct boilerplate in the current directory.
 * Fixed deprecated `getDisplayString(withNullability: true)` calls — parameter removed as only NNBD mode is supported.
 * Fixed deprecated `isSynthetic` usage on `FieldElement` — replaced with `isOriginDeclaration` per analyzer 10.x API.
 * Replaced `package:flutter_lints/flutter.yaml` with `package:lints/recommended.yaml` in `analysis_options.yaml` (package is Dart-only, not Flutter).

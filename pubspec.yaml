@@ -4,6 +4,9 @@ version: 1.0.1
 homepage:
 repository: https://github.com/markokarajlovic/ephoenix_state
 
+executables:
+  ephoenix_state: ephoenix_state
+
 environment:
   sdk: ^3.0.0
 

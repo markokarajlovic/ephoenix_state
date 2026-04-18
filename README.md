@@ -20,6 +20,47 @@ It is designed for simple state objects where you want a small API surface and g
   - abstract class + `factory` constructor pattern
   - direct field class pattern
 
+## CLI
+
+`ephoenix_state` ships a command-line tool that scaffolds a new state file in the current directory.
+
+### Activate
+
+```bash
+dart pub global activate ephoenix_state
+```
+
+Make sure the Dart global bin is on your PATH (add to `~/.zshrc` or `~/.bashrc` if needed):
+
+```bash
+export PATH="$PATH:$HOME/.pub-cache/bin"
+```
+
+### Use
+
+```bash
+ephoenix_state home_state
+```
+
+This creates `home_state.dart` in the current directory:
+
+```dart
+import 'package:ephoenix_state/ephoenix_state.dart';
+
+part 'home_state.ephoenix_state.dart';
+
+@ephoenixState
+abstract class HomeState with _$HomeState {
+  const HomeState._();
+
+  const factory HomeState({
+
+  }) = _HomeState;
+}
+```
+
+The argument must be in `snake_case`. The class name is derived automatically (`home_state` → `HomeState`).
+
 ## Getting started
 
 Add dependencies:
