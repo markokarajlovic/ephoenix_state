@@ -189,7 +189,7 @@ class EphoenixStateGenerator extends GeneratorForAnnotation<EphoenixState> {
       param.type.nullabilitySuffix == NullabilitySuffix.question;
 
   String _paramTypeName(FormalParameterElement param) =>
-      param.type.getDisplayString(withNullability: true);
+      param.type.getDisplayString();
 
   /// Default value for the generated concrete constructor.
   /// - @Default(v)         → v
@@ -213,7 +213,7 @@ class EphoenixStateGenerator extends GeneratorForAnnotation<EphoenixState> {
 
   /// Fallback value used in copyWith when a param is not supplied.
   /// - @DefaultCopyWith(v) → v
-  /// - @Default(v) or none → this.<name>  (preserve current value)
+  /// - @Default(v) or none → `this.<name>`  (preserve current value)
   String _fallbackFromParam(FormalParameterElement param) {
     if (_defaultCopyWithChecker.hasAnnotationOf(param)) {
       return _toLiteral(
@@ -242,7 +242,7 @@ class EphoenixStateGenerator extends GeneratorForAnnotation<EphoenixState> {
     final mixinName = '_\$${className}Mixin';
 
     final fields = element.fields
-        .where((f) => !f.isStatic && !f.isSynthetic)
+        .where((f) => !f.isStatic && f.isOriginDeclaration)
         .toList();
 
     final buffer = StringBuffer();
@@ -345,7 +345,7 @@ class EphoenixStateGenerator extends GeneratorForAnnotation<EphoenixState> {
       field.type.nullabilitySuffix == NullabilitySuffix.question;
 
   String _typeName(FieldElement field) =>
-      field.type.getDisplayString(withNullability: true);
+      field.type.getDisplayString();
 
   /// Fallback for legacy field pattern copyWith.
   /// Only @DefaultCopyWith overrides; @Default does NOT affect copyWith.

@@ -1,6 +1,6 @@
 name: ephoenix_state
 description: Lightweight annotations and code generator for equality and copyWith.
-version: 1.0.0
+version: 1.0.1
 homepage:
 repository: https://github.com/markokarajlovic/ephoenix_state
 

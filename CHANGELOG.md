@@ -1,3 +1,10 @@
+## 1.0.1
+
+* Fixed deprecated `getDisplayString(withNullability: true)` calls — parameter removed as only NNBD mode is supported.
+* Fixed deprecated `isSynthetic` usage on `FieldElement` — replaced with `isOriginDeclaration` per analyzer 10.x API.
+* Replaced `package:flutter_lints/flutter.yaml` with `package:lints/recommended.yaml` in `analysis_options.yaml` (package is Dart-only, not Flutter).
+
+
 ## 1.0.0
 
 * Initial release of `ephoenix_state`.
