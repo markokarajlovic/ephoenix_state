@@ -1,4 +1,4 @@
-## 0.0.1
+## 1.0.0
 
 * Initial release of `ephoenix_state`.
 * Added `@ephoenixState` annotation with code generation for value-based `==`, `hashCode`, and `copyWith`.
