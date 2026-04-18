@@ -1,0 +1,30 @@
+name: ephoenix_state_example
+description: "Example Flutter app using ephoenix_state with BLoC."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bloc: ^9.2.0
+  flutter_bloc: ^9.1.1
+  ephoenix_state:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.13.1
+
+# flutter_test from the Flutter SDK pins meta 1.17.0, while analyzer >=10.0.2
+# requires meta ^1.18.0. meta is fully backward-compatible, so this override
+# is safe for the example app (which is never published to pub.dev).
+dependency_overrides:
+  meta: ^1.18.2
+
+flutter:
+  uses-material-design: true
