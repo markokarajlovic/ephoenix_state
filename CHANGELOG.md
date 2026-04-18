@@ -1,3 +1,7 @@
+## 1.0.2
+
+* Updated `analyzer` constraint to `>=10.0.0 <13.0.0` — raises lower bound to 10.0.0 where `isOriginDeclaration` was introduced, and raises upper bound to support the latest stable (12.x).
+
 ## 1.0.1
 
 * Added `ephoenix_state <name>` CLI command that scaffolds a new state file with the correct boilerplate in the current directory.
